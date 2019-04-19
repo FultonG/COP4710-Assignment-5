@@ -33,3 +33,20 @@ body{
     transform: rotate(360deg);
   }
 }
+
+.cardLink:hover{
+  text-decoration-line: none;
+}
+
+.rounded:hover{
+  color: white;
+  box-shadow: 0 15px 45px -5px rgba(10, 16, 34, .3);
+  font-family: Graphik, sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 25px;
+  transition: all 200ms ease;
+  -webkit-transform: translate(0px, -2px);
+  -ms-transform: translate(0px, -2px);
+  transform: translate(0px, -2px);
+}

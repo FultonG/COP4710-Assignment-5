@@ -11,11 +11,10 @@ import inventory from "../inventory.svg"
 import publisher from "../publisher.svg"
 import branch from "../branch.svg"
 import reset from "../reset.svg"
-import './Home.css';
 
 class Home extends Component {
     render() {
-        var menuOptions = [{ name: "Authors", link: "#", icon: author }, { name: "Books", link: "#", icon: book }, { name: "Inventory", link: "#", icon: inventory }, { name: "Publishers", link: "#", icon: publisher }, { name: "Branch", link: "#", icon: branch }, { name: "Reset Database", link: "#", icon: reset }];
+        var menuOptions = [{ name: "Authors", link: "/authors", icon: author }, { name: "Books", link: "#", icon: book }, { name: "Inventory", link: "#", icon: inventory }, { name: "Publishers", link: "#", icon: publisher }, { name: "Branch", link: "#", icon: branch }, { name: "Reset Database", link: "#", icon: reset }];
         return (
             <Container>
                 <Row>
