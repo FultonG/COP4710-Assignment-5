@@ -17,24 +17,22 @@ class Home extends Component {
     render() {
         var menuOptions = [{ name: "Authors", link: "#", icon: author }, { name: "Books", link: "#", icon: book }, { name: "Inventory", link: "#", icon: inventory }, { name: "Publishers", link: "#", icon: publisher }, { name: "Branch", link: "#", icon: branch }, { name: "Reset Database", link: "#", icon: reset }];
         return (
-            <div>
-                <Container>
-                    <Row>
-                        {menuOptions.map(option => (
-                            <Col xs={12} md={4}>
-                                <Link to={option.link} className="cardLink">
-                                    <Card style={{ margin: "20px" }}>
-                                        <Card.Body className="rounded" style={{ borderRadius: "10px", boxShadow: "0 5px 15px -2px rgba(10, 16, 34, .4)", transition: "all 200ms ease" }}>
-                                            <Image src={option.icon} fluid />
-                                            <Card.Title>{option.name}</Card.Title>
-                                        </Card.Body>
-                                    </Card>
-                                </Link>
-                            </Col>
-                        ))}
-                    </Row>
-                </Container>
-            </div>
+            <Container>
+                <Row>
+                    {menuOptions.map(option => (
+                        <Col xs={12} md={4}>
+                            <Link to={option.link} className="cardLink">
+                                <Card style={{ margin: "20px" }}>
+                                    <Card.Body className="rounded" style={{ borderRadius: "10px", boxShadow: "0 5px 15px -2px rgba(10, 16, 34, .4)", transition: "all 200ms ease" }}>
+                                        <Image src={option.icon} fluid />
+                                        <Card.Title>{option.name}</Card.Title>
+                                    </Card.Body>
+                                </Card>
+                            </Link>
+                        </Col>
+                    ))}
+                </Row>
+            </Container>
         );
     }
 }
