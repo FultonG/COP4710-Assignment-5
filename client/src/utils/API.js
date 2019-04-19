@@ -7,5 +7,8 @@ export default {
     },
     getBooks: function(){
         return axios.get('/api/book')
+    },
+    getBook: function (id) {
+        return axios.get(`/api/book/${id}`)
     }
 };

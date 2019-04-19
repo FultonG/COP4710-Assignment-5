@@ -21,7 +21,7 @@ const books = {
         });
     },
     getBook: (id, cb) => {
-        connection.query(`SELECT * FROM BOOK WHERE BookCode = '${id}'`, function (error, results) {
+        connection.query(`SELECT * FROM (BOOK NATURAL JOIN PUBLISHER NATURAL JOIN INVENTORY NATURAL JOIN BRANCH NATURAL JOIN AUTHOR NATURAL JOIN WROTE) WHERE BookCode = '${id}'`, function (error, results) {
             if (error) {
                 cb(400, error)
                 console.log(error);
