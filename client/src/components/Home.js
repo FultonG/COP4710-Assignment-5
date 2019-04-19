@@ -22,12 +22,14 @@ class Home extends Component {
                     <Row>
                         {menuOptions.map(option => (
                             <Col xs={12} md={4}>
-                                <Card style={{margin: "20px"}}>
-                                    <Card.Body className="rounded" style={{ borderRadius: "10px", boxShadow: "0 5px 15px -2px rgba(10, 16, 34, .4)", transition: "all 200ms ease" }}>
-                                        <Image src={option.icon} fluid />
-                                        <Card.Title>{option.name}</Card.Title>
-                                    </Card.Body>
-                                </Card>
+                                <Link to={option.link} className="cardLink">
+                                    <Card style={{ margin: "20px" }}>
+                                        <Card.Body className="rounded" style={{ borderRadius: "10px", boxShadow: "0 5px 15px -2px rgba(10, 16, 34, .4)", transition: "all 200ms ease" }}>
+                                            <Image src={option.icon} fluid />
+                                            <Card.Title>{option.name}</Card.Title>
+                                        </Card.Body>
+                                    </Card>
+                                </Link>
                             </Col>
                         ))}
                     </Row>

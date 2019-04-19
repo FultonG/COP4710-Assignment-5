@@ -8,6 +8,10 @@
     background-color: #7ca1f1;
 }   
 
+.cardLink:hover{
+  text-decoration-line: none;
+}
+
 .rounded:hover{
   color: white;
   box-shadow: 0 15px 45px -5px rgba(10, 16, 34, .3);
