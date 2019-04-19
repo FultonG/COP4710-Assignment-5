@@ -6,8 +6,8 @@ router.get("/", (req, res) => {
     authors.getAllAuthors((status, data = "ok") => res.status(status).send(data));
 });
 
-router.get("/:name", (req, res) => {
-    authors.getAuthor(req.params.name, (status, data = "ok") => res.status(status).send(data));
+router.get("/:id", (req, res) => {
+    authors.getAuthor(req.params.id, (status, data = "ok") => res.status(status).send(data));
 });
 
 router.put("/", (req, res) => {
@@ -18,8 +18,8 @@ router.post("/", (req, res) => {
     authors.updateAuthor(req.body, (status, data = "ok") => res.status(status).send(data));
 });
 
-router.delete("/:name", (req, res) => {
-    authors.deleteAuthor(req.params.name, (status, data = "ok") => res.status(status).send(data));
+router.delete("/:id", (req, res) => {
+    authors.deleteAuthor(req.params.id, (status, data = "ok") => res.status(status).send(data));
 });
 
 module.exports = router;
