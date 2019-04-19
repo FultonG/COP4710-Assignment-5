@@ -5,4 +5,7 @@ export default {
     getAuthors: function () {
         return axios.get(`/api/author`);
     },
+    getBooks: function(){
+        return axios.get('/api/book')
+    }
 };
