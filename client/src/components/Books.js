@@ -8,6 +8,7 @@ import Badge from 'react-bootstrap/Badge';
 import bookImg from "../book.svg"
 import { Link } from 'react-router-dom';
 import API from "../utils/API";
+import { cpus } from "os";
 function Books() {
     const [books, setBooks] = useState([]);
 
@@ -22,6 +23,18 @@ function Books() {
 
     return (
         <Container>
+            <Row className="justify-content-md-center">
+                <Col xs={12} md={4}>
+                    <Link to="/newBook">
+                        <Card className="rounded" style={{ borderRadius: "10px", boxShadow: "0 5px 15px -2px rgba(10, 16, 34, .4)", transition: "all 200ms ease", margin: "20px" }}>
+                            <Card.Body>
+                                <Image src={bookImg} fluid />
+                                <Card.Title>Add a new book</Card.Title>
+                            </Card.Body>
+                        </Card>
+                    </Link>
+                </Col>
+            </Row>
             <Row>
                 {books.map(book => (
                     <Col xs={12} md={4} key={book.BookCode}>

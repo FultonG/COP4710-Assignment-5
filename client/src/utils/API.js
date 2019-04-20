@@ -13,5 +13,8 @@ export default {
     },
     getBook: function (id) {
         return axios.get(`/api/book/${id}`)
+    },
+    createBook: function (data) {
+        return axios.put(`/api/book`, data);
     }
 };
