@@ -21,7 +21,7 @@ const authors = {
         });
     },
     getAuthor: (id, cb) => {
-        connection.query(`SELECT * FROM AUTHOR WHERE AuthorNum = '${id}'`, function (error, results) {
+        connection.query(`SELECT * FROM (AUTHOR NATURAL JOIN WROTE NATURAL JOIN BOOK) WHERE AuthorNum = '${id}'`, function (error, results) {
             if (error) {
                 cb(400, error)
                 console.log(error);
